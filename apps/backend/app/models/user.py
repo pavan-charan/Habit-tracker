@@ -15,6 +15,8 @@ if TYPE_CHECKING:
     from app.models.settings import UserSettings
     from app.models.notification import Notification
     from app.models.audit import AuditLog
+    from app.models.task import Task
+    from app.models.note import Note
 
 
 class User(Base):
@@ -38,6 +40,8 @@ class User(Base):
     goal_progress: Mapped[List["GoalProgress"]] = relationship("GoalProgress", back_populates="user", cascade="all, delete-orphan")
     notifications: Mapped[List["Notification"]] = relationship("Notification", back_populates="user", cascade="all, delete-orphan")
     audit_logs: Mapped[List["AuditLog"]] = relationship("AuditLog", back_populates="user", cascade="all, delete-orphan")
+    tasks: Mapped[List["Task"]] = relationship("Task", back_populates="user", cascade="all, delete-orphan")
+    notes: Mapped[List["Note"]] = relationship("Note", back_populates="user", cascade="all, delete-orphan")
 
 
 class Profile(Base):

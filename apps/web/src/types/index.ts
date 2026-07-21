@@ -119,3 +119,27 @@ export interface DashboardData {
   weekly_water_series: number[];
   weekly_sleep_series: number[];
 }
+
+export interface Task {
+  id: string;
+  user_id: string;
+  title: string;
+  description?: string;
+  is_completed: boolean;
+  due_date?: string;
+  priority: 'low' | 'medium' | 'high' | 'urgent';
+  category?: string;
+  completed_at?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Note {
+  id: string;
+  user_id: string;
+  title: string;
+  content: string;
+  tags: string[];
+  created_at: string;
+  updated_at: string;
+}

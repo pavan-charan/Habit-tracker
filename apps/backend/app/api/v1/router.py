@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.v1 import auth, goals, habits, journal, settings, sleep, stats, users, water
+from app.api.v1 import auth, goals, habits, journal, notes, settings, sleep, stats, tasks, users, water
 
 api_router = APIRouter()
 
@@ -13,3 +13,5 @@ api_router.include_router(journal.router, prefix="/journal", tags=["journal"])
 api_router.include_router(goals.router, prefix="/goals", tags=["goals"])
 api_router.include_router(settings.router, prefix="/settings", tags=["settings"])
 api_router.include_router(stats.router, prefix="/stats", tags=["stats"])
+api_router.include_router(tasks.router, prefix="/tasks", tags=["tasks"])
+api_router.include_router(notes.router, prefix="/notes", tags=["notes"])

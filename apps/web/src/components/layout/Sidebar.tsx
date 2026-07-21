@@ -16,10 +16,14 @@ import {
   ChevronRight,
   Search,
   Sparkles,
+  ListTodo,
+  StickyNote,
 } from 'lucide-react';
 
 const navItems = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+  { name: 'Tasks', href: '/tasks', icon: ListTodo },
+  { name: 'Notes', href: '/notes', icon: StickyNote },
   { name: 'Journal', href: '/journal', icon: BookOpen },
   { name: 'Habits', href: '/habits', icon: CheckSquare },
   { name: 'Sleep', href: '/sleep', icon: Moon },
@@ -51,7 +55,7 @@ export const Sidebar: React.FC = () => {
                   Personal<span className="text-purple-400">OS</span>
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-semibold mt-1">
-                  v1.0 Phase 1
+                  v2.0 Phase 2
                 </span>
               </div>
             )}
