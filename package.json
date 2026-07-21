@@ -1,0 +1,30 @@
+{
+  "name": "personalos-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PersonalOS - Your AI-powered Personal Operating System (Phase 1 Foundation)",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:backend": "npm run dev --workspace=apps/backend",
+    "build": "npm run build --workspace=apps/web",
+    "lint": "npm run lint --workspaces",
+    "docker:up": "docker-compose up -d --build",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "personal-os",
+    "life-management",
+    "nextjs15",
+    "fastapi",
+    "postgresql",
+    "dashboard",
+    "health-tracker",
+    "productivity"
+  ],
+  "author": "PersonalOS Core Team",
+  "license": "MIT"
+}
